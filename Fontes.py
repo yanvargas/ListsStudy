@@ -106,18 +106,27 @@ def sequential_search(arr, target):
         if arr[i] == target:
             return i
     return -1
-
-# Exemplo de utilização
+    
 my_list = [3, 5, 2, 8, 9, 1]
 print(sequential_search(my_list, 8))  # Retorna o índice onde está o número 8
 
 
 #Busca binária: https://www.geeksforgeeks.org/binary-search/
 
-def binary_search(arr, target):
-    low = 0
-    high = len(arr) - 1
+my_list = [1, 3, 5, 7, 9, 11, 13]
 
-    while low <= high:
-        mid =
+target = 7
+low = 0
+high = len(my_list) - 1
+found = False
+
+while low <= high:
+    mid = (low + high) // 2
+    if my_list[mid] == target:
+        found = True
+        break
+    elif my_list[mid] < target:
+        low = mid + 1
+    else:
+        high = mid - 1
 
